@@ -1,0 +1,15 @@
+{
+  "name": "History",
+  "version": "1.0",
+  "description": "Extension to track websites visited",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "history.js"
+  },
+  "permissions": [
+    "history"
+  ],
+  "host_permissions": [
+    "https://localhost:3000/*"
+  ]
+}
