@@ -1,14 +1,23 @@
 {
-  "name": "History",
+  "name": "MentalHealthCo",
   "version": "1.0",
   "description": "Extension to track websites visited",
   "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApF+E87lYyZnhhmylzROTHX/xEPRHXYz62zdC2DDNf2wsl+8esVExyCI4+pD9w5+kek/nT3GSN1WcJh7mL/g5RQ0LrXNoJFb5mjkdUY/DW+1JnU21Q3wCywmiF2pC/oH/uufPU9MRm645eg3tTKiUWMG/aX498yevxMCswcZQUfnbKGQWWQxbNg3XqDLbMIDMzY72Oq4jnwbJanHUYEFUurRUp+VKq01m8reUQ7VCPpVzxaCklkBeVIGGfPkB3zHnbLK52SuHIHEzp/7RHugYeJojW3ZG4wogNsvyThKtj3EbS24eFzoeczQSb0lSmDNFC8gK2cF/GtvOrfNM7loAWwIDAQAB",
   "background": {
-    "service_worker": "history.js"
+    "service_worker": "mentalhealthcochrome.js"
   },
   "permissions": [
+    "identity",
+    "identity.email",
     "history"
   ],
+  "oauth2": {
+    "client_id": "73147165370-686l2rr485koltr18d9439mh97ee1jeb.apps.googleusercontent.com",
+    "scopes": [
+      "profile email"
+    ]
+  },
   "host_permissions": [
     "https://localhost:3000/*"
   ]
