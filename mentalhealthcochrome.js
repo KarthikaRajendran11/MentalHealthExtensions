@@ -26,13 +26,12 @@ chrome.history.onVisited.addListener(function(result) {
         "url" : result.url,
         "email": email,
     }
-
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('GET', 'POST', 'OPTIONS');
-    var response = fetch("https://EC2Co-EcsEl-13VVDBYDJCR4H-496411098.us-east-1.elb.amazonaws.com/website", {
+    var response = fetch("http://EC2Co-EcsEl-13VVDBYDJCR4H-496411098.us-east-1.elb.amazonaws.com:8080/website", {
         method: 'POST',
         body: JSON.stringify(data),
         mode: 'no-cors',
