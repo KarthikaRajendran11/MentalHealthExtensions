@@ -19,6 +19,6 @@
     ]
   },
   "host_permissions": [
-    "https://localhost:3000/*"
+    "https://EC2Co-EcsEl-13VVDBYDJCR4H-496411098.us-east-1.elb.amazonaws.com/*"
   ]
 }

